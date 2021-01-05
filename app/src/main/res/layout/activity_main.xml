@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlack"
+    tools:context="com.example.NestedReclerview.MainActivity">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeData">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@color/black">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/homeToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin">
+
+                    <ImageView
+                        android:id="@+id/notiimg"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="150dp"
+                        android:background="@drawable/prime"></ImageView>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabInlineLabel="true"
+                app:tabTextColor="@color/white"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabMode="fixed"
+                android:layout_gravity="fill"
+                 android:background="@color/black"
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:labelFor="@id/tablayout"
+            android:layout_gravity=""
+            android:layout_marginTop="106dp"
+            android:visibility="gone"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.viewpager.widget.ViewPager>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homdataRec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/homenav"
+ app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"
+        app:itemTextAppearanceInactive="@style/Widget.Design.BottomNavigationView.Inactive"
+        app:itemTextAppearanceActive="@style/Widget.Design.BottomNavigationView.Active"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="selected"
+        app:itemIconTint="@color/cardview_light_background"
+        android:background="?android:windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightBlack"
+    tools:context="Details.DetailsActivity">
+  <LinearLayout
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/detailrec"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+      </androidx.recyclerview.widget.RecyclerView>
+  </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/detailshomenav"
+        app:itemBackground="@color/black"
+        app:itemTextColor="@color/white"
+        app:itemTextAppearanceInactive="@style/Widget.Design.BottomNavigationView.Inactive"
+        app:itemTextAppearanceActive="@style/Widget.Design.BottomNavigationView.Active"
+        app:menu="@menu/bottom_menu"
+        app:labelVisibilityMode="selected"
+        app:itemIconTint="@color/cardview_light_background"
+        android:background="?android:windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>

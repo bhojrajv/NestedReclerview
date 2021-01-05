@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_house_siding_24"
+        android:title="home"
+
+        ></item>
+    <item android:id="@+id/find"
+        android:title="find"
+        android:icon="@drawable/ic_baseline_search_24"
+        ></item>
+    <item android:id="@+id/download"
+        android:title="Download"
+        android:icon="@drawable/ic_baseline_cloud_download_24"
+        ></item>
+    <item android:id="@+id/profile"
+        android:title="My stuff"
+        android:icon="@drawable/ic_baseline_account_circle_24"></item>
+</menu>
